@@ -5,6 +5,7 @@ import com.google.common.base.Preconditions;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 public class MultiGraph implements Graph{
     protected final List<Knote> knoten=new ArrayList<>();
@@ -43,13 +44,16 @@ public class MultiGraph implements Graph{
         Knote inzidentKnote2= new Knote(inzidentKnotenName2);
         if(!knoten.contains(inzidentKnote1)) knoten.add(inzidentKnote1);
         if(!knoten.contains(inzidentKnote2)) knoten.add(inzidentKnote2);
-        Kante kante = new Kante(name,inzidentKnote1,inzidentKnote2,isUngerichtet);
+
+
+        Kante kante = new Kante(name,knoten.get(),inzidentKnote2,isUngerichtet);
 
         return kanten.add(kante);
     }
 /**
  * Überladene Methode um Kante ohne Namen auch hinzufügen zu können.
  * */
+    @Override
     public boolean kanteHinzufuegen(String inzidentKnotenName1, String inzidentKnotenName2, boolean isUngerichtet) {
         return kanteHinzufuegen("",inzidentKnotenName2,inzidentKnotenName2,isUngerichtet);
     }
@@ -57,28 +61,44 @@ public class MultiGraph implements Graph{
 
     @Override
     public int getAnzahlKnoten() {
-        return 0;
+        return knoten.size();
     }
 
     @Override
     public int getAnzahlKanten() {
-        return 0;
+        return kanten.size();
     }
-
+/**
+ * Die Methode bekommt einen Knoten und liefert die Anzahl der eingehenden Kanten.
+ * Es wird die Methode getEingehendeKanten als Hilfsmethode benutzt.
+ *@param knote
+ * */
     @Override
     public int getInnenGrad(Knote knote) {
-        return 0;
+        return getEingehendeKanten(knote).size();
     }
-
+    /**
+     * Die Methode bekommt einen Knoten und liefert die Anzahl der ausgehenden Kanten.
+     * Es wird die Methode getAusgehendeKanten als Hilfsmethode benutzt.
+     *@param knote
+     * */
     @Override
-    public int getAußenGrad(Knote knote) {
-        return 0;
-    }
+    public int getAussenGrad(Knote knote) {
 
+        return getAusgehendeKanten(knote).size();
+    }
+    /**
+     * Die Methode bekommt einen Knoten und liefert den Knotengrad also Aussengrad + Innengrad.
+     * Es wird die Methode getAussenGrad und getInnenGrad als Hilfsmethode benutzt.
+     *@param knote
+     * */
     @Override
     public int getKnotenGrad(Knote knote) {
-        return 0;
+
+        return getAusgehendeKanten(knote).size()+getEingehendeKanten(knote).size();
     }
+
+
     @Override
     public List<Kante> getAusgehendeKanten(Knote knote) {
         return null;
@@ -89,6 +109,11 @@ public class MultiGraph implements Graph{
         return null;
     }
 
+    /**
+     * Die Methode liefert die Liste der inzidenten Knoten einer Kante, also das eine Ende und das andere Ende
+     * der Kante.
+     * @param kante
+     * */
     @Override
     public List<Knote> getInzidentKnoten(Kante kante) {
         return List.of(kante.endKnote,kante.startKnote);
@@ -96,17 +121,26 @@ public class MultiGraph implements Graph{
 
     @Override
     public boolean enthaeltKnoten(String name) {
-        return false;
+        return knoten.contains(new Knote(name));
     }
 
     @Override
-    public boolean enthaeltKnoten(List<Kante> inzidentKanten) {
-        return false;
-    }
-
-    @Override
-    public Knote getKnoten(String name) {
+    public List<Kante>  getInzidentKanten(Knote knote) {
         return null;
+    }
+/**
+ *Die Methode bekommt einen Namen und liefert eine Optional-Box mit dem Knoten, der den Namen hat
+ * @Param name
+ * @return Optional<Knote> falls der Knote im Graph ist wird er In Optional gepackt sonst wird leere Optional<Knote>
+ * geliefert
+ * */
+    @Override
+    public Optional<Knote> getKnoten(String name) {
+
+       for(Knote knotee: knoten){
+           if(knotee.name.equals(name)) return Optional.of(knotee);
+       }
+        return Optional.empty();
     }
 
 
@@ -121,12 +155,12 @@ public class MultiGraph implements Graph{
     }
 
     @Override
-    public Kante getKante(String name) {
+    public Optional<Kante> getKante(String name) {
         return null;
     }
 
     @Override
-    public Kante getKante(String inzidentKantenName1, String inzidentKantenName2) {
+    public Optional<Kante> getKante(String inzidentKantenName1, String inzidentKantenName2) {
         return null;
     }
 }

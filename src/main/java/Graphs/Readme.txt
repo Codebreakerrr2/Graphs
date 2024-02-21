@@ -65,7 +65,7 @@ Datum: 21.02.2024 17:00
     haben kann.
     Das MultiGraph implementiert Graph und hat somit alle notwendigen Funktionen.
     Meine Überlegung war, dass MultiGraph eine universelle oder obere-Klasse ist für alle weitere Graphklassen.
-    Z.B erbt die Klasse GerichtetesGraph von MultiGraph erlaubt jedoch nur das Hinzufügen von gerichteten Kanten.
+    Z.B erbt die Klasse GerichtetesGraph von MultiGraph, erlaubt jedoch nur das Hinzufügen von gerichteten Kanten.
     GerichtetesGraph hat außerdem seine spezifische Funktion, die ich im Laufe der Zeit entwickeln werde.
 
 

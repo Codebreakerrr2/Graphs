@@ -7,7 +7,7 @@ import java.util.Objects;
  * */
 public class Knote {
 
-    private String name;
+    protected String name;
 
     public Knote(String name) {
         this.name = name;

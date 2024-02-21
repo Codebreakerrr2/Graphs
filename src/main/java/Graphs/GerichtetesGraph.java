@@ -59,7 +59,7 @@ public class GerichtetesGraph extends MultiGraph {
     }
 
     @Override
-    public int getAußenGrad(Knote knote) {
+    public int getAussenGrad(Knote knote) {
         return 0;
     }
 
