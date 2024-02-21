@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="645e563f-38e1-4e3b-b4f4-6585b8da7a2f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Graphs/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Graphs/Graphen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Graphs/Kante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Graphs/Knoten.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Graphs/MultiGraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Graphs/Readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Graphs/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Graphs/Graphen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Graphs/GerichtetesGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Graphs/Kante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Graphs/Kante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Graphs/Knoten.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Graphs/Knote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Graphs/GraphenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Graphs/GerichtetesGraphTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +28,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -37,6 +40,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
   <component name="ProjectId" id="2ceWico5SmxK1Q16uG6k0ukzZRg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -45,15 +51,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -64,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1708472654958</updated>
-      <workItem from="1708472657301" duration="6694000" />
+      <workItem from="1708483211385" duration="15266000" />
     </task>
     <servers />
   </component>

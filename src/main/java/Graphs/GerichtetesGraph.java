@@ -41,11 +41,7 @@ public class GerichtetesGraph extends MultiGraph {
      *
      * */
 
-    @Override
-    public boolean kantenHinzufügen(Knote inzidentKnote1, Knote inzidentKnote2e) {
 
-        return false;
-    }
 
     @Override
     public int getAnzahlKnoten() {
