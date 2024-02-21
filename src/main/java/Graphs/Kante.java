@@ -1,16 +1,16 @@
 package Graphs;
 
-/**
- * Die Klasse stellt Graphs.Kanten in einem Graphs.Graph dar.
- * */
-public class Kante {
+public  class Kante {
     protected String name;
-    protected Knoten startKnoten;
-    protected Knoten endKnoten;
+    protected Knote startKnote;
+    protected Knote endKnote;
+    protected final boolean IstUngerichtet;
 
-    public Kante(String name, Knoten startKnoten, Knoten endKnoten) {
+    public Kante(String name, Knote startKnote, Knote endKnote, boolean IstUngerichtet) {
+        this.IstUngerichtet=IstUngerichtet;
         this.name = name;
-        this.startKnoten = startKnoten;
-        this.endKnoten = endKnoten;
+        this.startKnote = startKnote;
+        this.endKnote = endKnote;
     }
+
 }

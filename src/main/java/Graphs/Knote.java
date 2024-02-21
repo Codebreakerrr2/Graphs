@@ -3,26 +3,26 @@ package Graphs;
 import java.util.Objects;
 
 /**
- * Die Klasse stellt Graphs.Knoten in einem Graphs.Graph dar.
+ * Die Klasse stellt Knoten in einem Graph dar.
  * */
-public class Knoten {
+public class Knote {
 
     private String name;
 
-    public Knoten(String name) {
+    public Knote(String name) {
         this.name = name;
     }
 
     /**
-     * Unterscheidet wird Das Objekt Graphs.Knoten anhand des Namen.
+     * Unterscheidet wird das ObjektKnote anhand des Namen.
      * */
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Knoten knoten = (Knoten) o;
-        return name.equals(knoten.name);
+        Knote knote = (Knote) o;
+        return name.equals(knote.name);
     }
 
     @Override

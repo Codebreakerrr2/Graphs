@@ -3,17 +3,28 @@ package Graphs;
 import java.util.List;
 
 public interface Graph {
-    public Knoten anfangsKnotenVon(Kante kante);
-    public Knoten endKnotenVon(Kante kante);
 
-    public boolean knotenHinzufügen(Knoten knoten);
-    public boolean kantenHinzufügen(Kante kanten);
+    public List<Kante> getAusgehendeKanten(Knote knote);
+    public List<Kante> getEingehendeKanten(Knote knote);
+
+    public boolean knotenHinzufuegen(String knotenname);
+    public boolean kanteHinzufuegen( String name,String inzidentKnotenName1, String inzidentKnotenName2, boolean istUngerichtet);
+    public boolean kanteHinzufuegen(String inzidentKnotenName1, String inzidentKnotenName2, boolean istUngerichtet);
     public int getAnzahlKnoten();
     public int getAnzahlKanten();
-    public int getInnenGrad(Knoten knoten);
-    public int getAußenGrad(Knoten knoten);
-    public int getKnotenGrad(Knoten knoten);
-    public List<Knoten> getNachfolgerKnoten(Knoten knoten);
-    public List<Knoten> getVorGängerKnoten(Knoten knoten);
+    public int getInnenGrad(Knote knote);
+    public int getAußenGrad(Knote knote);
+    public int getKnotenGrad(Knote knote);
+    public List<Knote> getInzidentKnoten(Kante kante);
+    public boolean enthaeltKnoten(String name);
+    public boolean enthaeltKnoten(List<Kante> inzidentKanten);
+    public Knote getKnoten(String name);
+
+    public boolean enthaeltKante(String name);
+    public boolean enthaeltKante(String inzidentKantenName1,String inzidentKantenName2);
+
+    public Kante getKante(String name);
+    public Kante getKante(String inzidentKantenName1,String inzidentKantenName2);
+
 
 }
